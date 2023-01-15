@@ -1,0 +1,8 @@
+{
+  "slug": "offset-aware-chunker",
+  "title": "Offset-aware overlapping document chunker",
+  "description": "Splits text into overlapping whitespace-token windows while retaining exact character offsets and deterministic chunk IDs. Offsets refer to the original Unicode string, not UTF-8 bytes. Chunk size is measured in whitespace tokens, not a model tokenizer. No embedding model is used.",
+  "category": "agents",
+  "demo_args": [],
+  "expected_exit": 0
+}
