@@ -1,0 +1,3 @@
+A retrieval pipeline begins with source documents. Preserve source identifiers and character offsets so extracted answers can be traced back to the original text.
+
+Overlapping windows retain local context near boundaries. The right window size depends on the document structure and should be evaluated with real questions, not selected from a synthetic benchmark alone.
