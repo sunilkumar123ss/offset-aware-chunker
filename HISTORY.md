@@ -4,7 +4,7 @@ This reference implementation and all of the following milestone commits were pr
 
 **Every recorded author and committer date in this timeline is synthetic. These dates are not evidence that the code was written, tested, deployed, or used professionally in the past.**
 
-This snapshot is milestone 3 of 11. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
+This snapshot is milestone 4 of 11. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
 
 The progression decomposes already-completed October 2026 code into meaningful additions. It is not recovered original development history. Publication time is separate from the synthetic Git timestamps.
 
@@ -15,7 +15,7 @@ The progression decomposes already-completed October 2026 code into meaningful a
 | 1 | 2023-01-15T11:34:02+05:30 | Define package metadata and local artifact exclusions (present) |
 | 2 | 2023-03-19T12:30:55+05:30 | Add synthetic input fixtures and reference data (present) |
 | 3 | 2024-01-14T13:31:38+05:30 | Implement chunk text (present) |
-| 4 | 2024-03-15T17:30:42+05:30 | Expose the command-line demonstration and input handling (later stage) |
+| 4 | 2024-03-15T17:30:42+05:30 | Expose the command-line demonstration and input handling (present) |
 | 5 | 2024-05-30T10:09:10+05:30 | Test offsets exact and coverage complete (later stage) |
 | 6 | 2024-06-26T17:49:35+05:30 | Test stable ids and empty (later stage) |
 | 7 | 2025-01-08T14:58:40+05:30 | Test invalid windows fail (later stage) |

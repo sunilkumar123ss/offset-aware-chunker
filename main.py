@@ -27,3 +27,18 @@ def chunk_text(text, source_id, size=40, overlap=8):
         start = end - overlap
     return chunks
 
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--file", type=Path, default=Path(__file__).with_name("document.txt"))
+    parser.add_argument("--source-id", default="demo-guide")
+    parser.add_argument("--size", type=int, default=18)
+    parser.add_argument("--overlap", type=int, default=4)
+    args = parser.parse_args()
+    try:
+        result = chunk_text(args.file.read_text(), args.source_id, args.size, args.overlap)
+    except (ValueError, OSError, TypeError) as exc:
+        parser.error(str(exc))
+    print(json.dumps(result, indent=2, ensure_ascii=False))
+
+if __name__ == "__main__": main()
