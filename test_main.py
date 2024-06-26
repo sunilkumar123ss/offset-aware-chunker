@@ -20,4 +20,8 @@ class ChunkTests(unittest.TestCase):
             covered.update(range(c["token_start"], c["token_end"]))
         self.assertEqual(covered, set(range(6)))
         self.assertEqual(chunks[1]["token_start"], 2)
+    def test_stable_ids_and_empty(self):
+        self.assertEqual(chunk_text("café voice", "s"), chunk_text("café voice", "s"))
+        self.assertEqual(chunk_text("   ", "s"), [])
+        self.assertNotEqual(chunk_text("voice", "a")[0]["id"], chunk_text("voice", "b")[0]["id"])
 
