@@ -24,4 +24,7 @@ class ChunkTests(unittest.TestCase):
         self.assertEqual(chunk_text("café voice", "s"), chunk_text("café voice", "s"))
         self.assertEqual(chunk_text("   ", "s"), [])
         self.assertNotEqual(chunk_text("voice", "a")[0]["id"], chunk_text("voice", "b")[0]["id"])
+    def test_invalid_windows_fail(self):
+        for size, overlap in [(0,0),(3,3),(3,-1),(True,0)]:
+            with self.assertRaises(ValueError): chunk_text("text", "s", size, overlap)
 
