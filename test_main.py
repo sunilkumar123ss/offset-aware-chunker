@@ -27,4 +27,7 @@ class ChunkTests(unittest.TestCase):
     def test_invalid_windows_fail(self):
         for size, overlap in [(0,0),(3,3),(3,-1),(True,0)]:
             with self.assertRaises(ValueError): chunk_text("text", "s", size, overlap)
+    def test_short_final_window_no_redundant_tail(self):
+        self.assertEqual(len(chunk_text("one two three", "s", 3, 2)), 1)
 
+if __name__ == "__main__": unittest.main()
